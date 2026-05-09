@@ -21,8 +21,4 @@ export let eggs = #{
 		strategy: "merge",
 		enabled: true,
 	},
-	eww: #{
-		targets: "~/.config/eww",
-		enabled: true,
-	},
 };
