@@ -16,10 +16,6 @@ export let eggs = #{
 		templates: ["menu.xml"],
 		enabled: true,
 	},
-	bash: #{
-		targets: "~/.config/bash",
-		enabled: true,
-	},
 	emacs: #{
 		targets: "~",
 		strategy: "merge",
