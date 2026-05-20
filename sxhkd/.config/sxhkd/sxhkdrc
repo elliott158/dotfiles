@@ -1,0 +1,20 @@
+
+super + shift + q
+	bspc quit
+
+super + r
+	bspc wm -r
+
+super + q
+	bspc node -c
+
+super + e
+	st
+
+super + w
+	librewolf-bin
+
+super + {shift + t, shift + f}
+	bspc node -t {tiled, fullscreen}
+
+`
