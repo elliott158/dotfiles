@@ -5,7 +5,7 @@ super + r
 	bspc wm -r
 
 super + q
-	bspc node -c
+	bspc node -k
 
 super + e
 	st
