@@ -1,4 +1,3 @@
-
 super + shift + q
 	bspc quit
 
@@ -17,4 +16,9 @@ super + w
 super + {shift + t, shift + f}
 	bspc node -t {tiled, fullscreen}
 
-`
+alt + {Up, Down, Left, Right}
+	bspc node -f {north, south, west, east}
+
+super + {Left, Right}
+	bspc desktop -f {prev, next}
+
