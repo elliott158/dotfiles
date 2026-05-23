@@ -7,7 +7,7 @@ polybar &
 xsetroot -cursor_name left_ptr
 xset r rate 200 50
 
-bspc monitor -d 1 2 3 4 5
+bspc monitor -d "I" "II" "III" "IV" "V"
 
 bspc config border_width 4
 bspc config window_gap 10
