@@ -8,7 +8,7 @@ super + q
 	bspc node -k
 
 super + e
-	st
+	lxterminal
 
 super + w
 	librewolf-bin
