@@ -4,13 +4,13 @@ super + shift + q
 super + r
 	bspc wm -r
 
-super + q
-	bspc node -k
+@super + q
+	bspc node -c
 
-super + e
+@super + e
 	lxterminal
 
-super + w
+@super + w
 	librewolf-bin
 
 super + {shift + t, shift + f}
