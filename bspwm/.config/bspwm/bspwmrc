@@ -3,6 +3,8 @@
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 feh --bg-scale --randomize ~/Documents/wallpapers/* &
+tint2 &
+
 xsetroot -cursor_name left_ptr
 xset s off
 xset r rate 200 50
