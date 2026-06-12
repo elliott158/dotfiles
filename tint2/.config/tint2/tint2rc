@@ -9,7 +9,7 @@
 rounded = 0
 border_width = 0
 border_sides = TBLR
-background_color = #000000 60
+background_color = #000000 50
 border_color = #000000 30
 background_color_hover = #000000 60
 border_color_hover = #000000 30
@@ -156,7 +156,7 @@ launcher_item_app = google-chrome.desktop
 
 #-------------------------------------
 # Clock
-time1_format = %H:%M
+time1_format = %H:%M:%S
 time2_format = %A %d %B
 time1_timezone = 
 time2_timezone = 
