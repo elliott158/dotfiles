@@ -13,8 +13,14 @@ super + r
 @super + w
 	librewolf-bin
 
-super + {shift + t, shift + f}
-	bspc node -t {tiled, fullscreen}
+super + t
+	bspc node -t tiled
+
+super + f
+	bspc node -t floating
+
+super + shift + f
+	bspc node -t fullscreen
 
 alt + {Up, Down, Left, Right}
 	bspc node -f {north, south, west, east}
