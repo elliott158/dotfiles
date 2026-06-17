@@ -72,7 +72,7 @@
 ;; ef-themes is a package containing nice Emacs themes by Prot
 (use-package ef-themes
   :config
-  (load-theme 'ef-night :no-confirm))
+  (load-theme 'ef-autumn :no-confirm))
 
 (use-package vundo
   :config
