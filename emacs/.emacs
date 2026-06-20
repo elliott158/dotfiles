@@ -11,6 +11,7 @@
 
 ;;turn off syntax highlighting
 (global-font-lock-mode 0)
+
 (menu-bar-mode -1)
 
 (when (display-graphic-p)
@@ -18,18 +19,13 @@
 	(scroll-bar-mode -1)
 	(horizontal-scroll-bar-mode -1))
 
-;; The initial splash screen is so oldish...
-;; Eventually, you will replace it with a fancy dashboard
 (setq inhibit-splash-screen t)
 
-;; -1 for non-blinking cursor; t for blinking
 (blink-cursor-mode -1)
 
-;; For smooth scrolling
 (pixel-scroll-precision-mode)
 
-;; Set the main font
-(set-frame-font "Monaco 14" nil t)  ; choose your poison
+(set-frame-font "Monaco 14" nil t)
 
 (setq use-package-always-ensure t)
 
@@ -57,11 +53,10 @@
 	 ("C-S-s" . isearch-forward)))
 
 (use-package hl-line
-  :ensure nil   ;; it's built-in
+  :ensure nil
   :config
-  (global-hl-line-mode))  ;; this enables it everywhere
+  (global-hl-line-mode))
 
-;; ef-themes is a package containing nice Emacs themes by Prot
 (use-package ef-themes
   :config
   (load-theme 'ef-autumn :no-confirm))
@@ -69,5 +64,3 @@
 (use-package vundo
   :config
   (setq vundo-glyph-alist vundo-unicode-symbols))
-
-;;language specifics
