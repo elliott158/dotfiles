@@ -25,28 +25,21 @@
 ;; -1 for non-blinking cursor; t for blinking
 (blink-cursor-mode -1)
 
-
 ;; For smooth scrolling
 (pixel-scroll-precision-mode)
 
 ;; Set the main font
 (set-frame-font "Monaco 14" nil t)  ; choose your poison
 
-;;slime-mode
-(setq inferior-lisp-program "sbcl")
+(setq use-package-always-ensure t)
 
-(require 'package)
-(package-initialize)
-
-;;basic editor things
+(require 'use-package)
 
 (use-package vertico
-  :ensure t
   :config
   (vertico-mode))
 
 (use-package which-key
-  :ensure t
   :config
   (which-key-mode))
 
@@ -59,7 +52,6 @@
    ("S-<right>". 'windmove-right)))
 
 (use-package consult
-  :ensure t
   :bind (("C-x b" . consult-buffer)
 	 ("C-s"   . consult-line)
 	 ("C-S-s" . isearch-forward)))
