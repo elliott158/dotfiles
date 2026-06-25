@@ -4,9 +4,12 @@ import XMonad.Layout.Spacing
 
 lh = spacingWithEdge 3 $ layoutHook def
 
+terminalp = "konsole"
+browser = "floorp"
+
 myKeys =
-       [ ("M-e", spawn "konsole")
-       , ("M-w", spawn "floorp")
+       [ ("M-e", spawn terminalp)
+       , ("M-w", spawn browser)
        , ("M-r", spawn "xmonad --recompile" >> spawn "xmonad --restart")
        , ("M-q", kill)
        ]
