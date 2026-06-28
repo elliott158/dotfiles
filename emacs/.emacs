@@ -29,7 +29,11 @@
 
 (setq use-package-always-ensure t)
 
-(require 'use-package)
+(require 'package)
+
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+
+(package-initialize)
 
 (use-package vertico
   :config
@@ -64,3 +68,8 @@
 (use-package vundo
   :config
   (setq vundo-glyph-alist vundo-unicode-symbols))
+
+(use-package wakatime-mode
+  :ensure t
+  :config
+  (global-wakatime-mode))
