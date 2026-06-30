@@ -25,8 +25,6 @@
 
 (pixel-scroll-precision-mode)
 
-(set-frame-font "Monaco 14" nil t)
-
 (setq use-package-always-ensure t)
 
 (require 'package)
@@ -36,7 +34,8 @@
 (package-initialize)
 
 (use-package vertico
-  :config
+  :ensure t
+  :init
   (vertico-mode))
 
 (use-package which-key
