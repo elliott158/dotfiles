@@ -1,3 +1,4 @@
+
 (setq custom-file "~/.emacs.d/emacs-custom.el")
 (load custom-file)
 
@@ -8,9 +9,6 @@
 (setq explicit-shell-file-name "/bin/bash")
 
 (global-display-line-numbers-mode t)
-
-;;turn off syntax highlighting
-(global-font-lock-mode 0)
 
 (menu-bar-mode -1)
 
@@ -71,4 +69,5 @@
 (use-package wakatime-mode
   :ensure t
   :config
-  (global-wakatime-mode))
+  )
+
