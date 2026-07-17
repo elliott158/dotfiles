@@ -60,7 +60,7 @@
 
 (use-package ef-themes
   :config
-  (load-theme 'ef-autumn :no-confirm))
+  (load-theme 'ef-dark :no-confirm))
 
 (use-package vundo
   :config
