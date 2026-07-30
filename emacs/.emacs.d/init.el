@@ -1,21 +1,18 @@
-
 (setq custom-file "~/.emacs.d/emacs-custom.el")
 (load custom-file)
 
 (setq make-backup-files nil)
 (setq-default indent-tabs-mode nil)
-(setq-default tab-width 2)
+(setq-default tab-width 4)
 
 (setq explicit-shell-file-name "/bin/bash")
-
-(global-display-line-numbers-mode t)
 
 (menu-bar-mode -1)
 
 (when (display-graphic-p)
-	(tool-bar-mode -1)
-	(scroll-bar-mode -1)
-	(horizontal-scroll-bar-mode -1))
+  (tool-bar-mode -1)
+  (scroll-bar-mode -1)
+  (horizontal-scroll-bar-mode -1))
 
 (setq inhibit-splash-screen t)
 
@@ -30,6 +27,12 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 
 (package-initialize)
+
+(defun a-term ()
+  (interactive)
+  (ansi-term (getenv "SHELL")))
+
+(global-set-key (kbd "C-c t") 'a-term)
 
 (use-package vertico
   :ensure t
@@ -50,25 +53,26 @@
 
 (use-package consult
   :bind (("C-x b" . consult-buffer)
-	 ("C-s"   . consult-line)
-	 ("C-S-s" . isearch-forward)))
+	     ("C-s"   . consult-line)
+	     ("C-S-s" . isearch-forward)))
 
 (use-package hl-line
   :ensure nil
   :config
   (global-hl-line-mode))
 
-(use-package ef-themes
-  :config
-  (load-theme 'ef-dark :no-confirm))
-
 (use-package vundo
   :config
   (setq vundo-glyph-alist vundo-unicode-symbols))
 
+(use-package ef-themes
+  :config)
+
+(use-package magit
+  :config)
+
 (use-package wakatime-mode
   :ensure t
   :config
-  (global-wakatime-mode 1)
-  )
+  (global-wakatime-mode 1))
 
