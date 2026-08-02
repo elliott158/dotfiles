@@ -1,5 +1,6 @@
 (setq custom-file "~/.emacs.d/emacs-custom.el")
-(load custom-file)
+(if (file-exists-p custom-file) (load custom-file)
+  (write-region " " nil custom-file))
 
 (setq make-backup-files nil)
 (setq-default indent-tabs-mode nil)
@@ -35,7 +36,7 @@
 (global-set-key (kbd "C-c t") 'a-term)
 
 (use-package vertico
-  :ensure t
+  
   :init
   (vertico-mode))
 
@@ -66,13 +67,14 @@
   (setq vundo-glyph-alist vundo-unicode-symbols))
 
 (use-package ef-themes
-  :config)
-
-(use-package magit
-  :config)
+  :config
+  (modus-themes-load-theme 'ef-summer))
 
 (use-package wakatime-mode
-  :ensure t
   :config
   (global-wakatime-mode 1))
 
+(use-package dashboard
+  :ensure t
+  :config
+  (dashboard-setup-startup-hook))
