@@ -21,6 +21,10 @@
 
 (pixel-scroll-precision-mode)
 
+(global-set-key [C-mouse-4] 'text-scale-increase)
+(global-set-key [C-mouse-5] 'text-scale-decrease)
+
+
 (setq use-package-always-ensure t)
 
 (require 'package)
