@@ -72,8 +72,4 @@
 
 (use-package ef-themes
   :config
-  (modus-themes-load-theme 'ef-summer))
-
-(use-package wakatime-mode
-  :config
-  (global-wakatime-mode 1))
+  (modus-themes-load-theme 'ef-bio))
