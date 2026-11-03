@@ -95,6 +95,7 @@ button:hover {
 #idle_inhibitor,
 #scratchpad,
 #power-profiles-daemon,
+#window,
 #mpd {
     padding: 0 10px;
     color: #000000;
