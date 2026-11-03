@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t; -*-
 (setq custom-file "~/.emacs.d/emacs-custom.el")
 (if (file-exists-p custom-file) (load custom-file)
   (write-region " " nil custom-file))
