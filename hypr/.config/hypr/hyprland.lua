@@ -121,12 +121,12 @@ hl.config({
         gaps_in  = 5,
         gaps_out = 20,
 
-        border_size = 2,
+--        border_size = 2,
 
-        col = {
+--[[        col = {
             active_border   = { colors = {"rgba(be76e2ee)", "rgba(8876e2ee)"}, angle = 45 },
             inactive_border = "rgba(595959aa)",
-        },
+    },--]]
 
         -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
         resize_on_border = false,
@@ -199,37 +199,37 @@ hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 7,    bezier = "
 hl.workspace_rule({ workspace = "w[tv1]", gaps_out = 0, gaps_in = 0 })
 hl.workspace_rule({ workspace = "f[1]",   gaps_out = 0, gaps_in = 0 })
 hl.window_rule({
-    name  = "no-gaps-wtv1",
-    match = { float = false, workspace = "w[tv1]" },
-    border_size = 0,
-    rounding    = 0,
+        name  = "no-gaps-wtv1",
+        match = { float = false, workspace = "w[tv1]" },
+        border_size = 0,
+        rounding    = 0,
 })
 hl.window_rule({
-    name  = "no-gaps-f1",
-    match = { float = false, workspace = "f[1]" },
-    border_size = 0,
-    rounding    = 0,
+        name  = "no-gaps-f1",
+        match = { float = false, workspace = "f[1]" },
+        border_size = 0,
+        rounding    = 0,
 })
 
 -- See https://wiki.hypr.land/Configuring/Layouts/Dwindle-Layout/ for more
 hl.config({
-    dwindle = {
-        preserve_split = true, -- You probably want this
-    },
+        dwindle = {
+            preserve_split = true, -- You probably want this
+        },
 })
 
 -- See https://wiki.hypr.land/Configuring/Layouts/Master-Layout/ for more
 hl.config({
-    master = {
-        new_status = "master",
-    },
+        master = {
+            new_status = "master",
+        },
 })
 
 -- See https://wiki.hypr.land/Configuring/Layouts/Scrolling-Layout/ for more
 hl.config({
-    scrolling = {
-        fullscreen_on_one_column = true,
-    },
+        scrolling = {
+            fullscreen_on_one_column = true,
+        },
 })
 
 ----------------
@@ -237,10 +237,10 @@ hl.config({
 ----------------
 
 hl.config({
-    misc = {
-        force_default_wallpaper = 0,    -- Set to 0 or 1 to disable the anime mascot wallpapers
-        disable_hyprland_logo   = true, -- If true disables the random hyprland logo / anime girl background. :(
-    },
+        misc = {
+            force_default_wallpaper = 0,    -- Set to 0 or 1 to disable the anime mascot wallpapers
+            disable_hyprland_logo   = true, -- If true disables the random hyprland logo / anime girl background. :(
+        },
 })
 
 
@@ -249,34 +249,34 @@ hl.config({
 ---------------
 
 hl.config({
-    input = {
-        kb_layout  = "us",
-        kb_variant = "",
-        kb_model   = "",
-        kb_options = "",
-        kb_rules   = "",
+        input = {
+            kb_layout  = "us",
+            kb_variant = "",
+            kb_model   = "",
+            kb_options = "",
+            kb_rules   = "",
 
-        follow_mouse = 1,
+            follow_mouse = 1,
 
-        sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
+            sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
 
-        touchpad = {
-            natural_scroll = false,
+            touchpad = {
+                natural_scroll = false,
+            },
         },
-    },
 })
 
 hl.gesture({
-    fingers = 3,
-    direction = "horizontal",
-    action = "workspace"
+        fingers = 3,
+        direction = "horizontal",
+        action = "workspace"
 })
 
 -- Example per-device config
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Devices/ for more
 hl.device({
-    name        = "epic-mouse-v1",
-    sensitivity = -0.5,
+        name        = "epic-mouse-v1",
+        sensitivity = -0.5,
 })
 
 
