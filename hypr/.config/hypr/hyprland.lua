@@ -38,7 +38,7 @@ hl.monitor({
 -- Set programs that you use
 local terminal = "foot"
 local fileManager = "nemo"
-local menu = "wofi --show run"
+local menu = "rofi -show run"
 
 
 -------------------
