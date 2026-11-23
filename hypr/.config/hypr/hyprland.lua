@@ -38,7 +38,7 @@ hl.monitor({
 -- Set programs that you use
 local terminal = "foot"
 local fileManager = "nemo"
-local menu = "wmenu-run"
+local menu = "wofi --show run"
 
 
 -------------------
@@ -121,7 +121,8 @@ hl.config({
         gaps_in  = 5,
         gaps_out = 20,
 
---        border_size = 2,
+        border_size = 0,
+        
 
 --[[        col = {
             active_border   = { colors = {"rgba(be76e2ee)", "rgba(8876e2ee)"}, angle = 45 },
