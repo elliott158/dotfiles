@@ -40,7 +40,9 @@ local terminal = "foot"
 local fileManager = "nemo"
 local menu = "rofi -show run"
 local alt_menu = "rofi -show drun"
-
+local file_menu = "rofi -show files -modi files:~/.config/rofi/rofi-filebrowser.sh"
+local cursor_theme = "Adwaita"
+local cursor_size = "20"
 -------------------
 ---- AUTOSTART ----
 -------------------
@@ -71,11 +73,13 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("/usr/libexec/hyprpolkitagent")
 end)
 
-hl.exec_cmd("hyprctl setcursor Bibata-Modern-Ice 24")
 hl.on("hyprland.start", function()
     hl.exec_cmd("/usr/local/bin/wallpaper > /tmp/wallpaper.out 2>&1")
 end)
 
+hl.on("hyprland.start", function()
+    hl.exec_cmd("hyprctl setcursor " .. cursor_theme .. " " .. cursor_size)
+end)
 
 hl.on("hyprland.start", function()
     hl.exec_cmd("~/.config/hypr/xdg-portal-hyprland")
@@ -87,9 +91,11 @@ end)
 
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
 
-hl.env("HYPRCURSOR_THEME", "Bibata-Modern-Ice")
-hl.env("XCURSOR_SIZE", "24")
-hl.env("HYPRCURSOR_SIZE", "24")
+hl.env("HYPRCURSOR_THEME", cursor_theme)
+hl.env("HYPRCURSOR_SIZE", cursor_size)
+
+hl.env("XCURSOR_THEME", cursor_theme)
+hl.env("XCURSOR_SIZE", cursor_size)
 
 
 -----------------------
@@ -139,8 +145,8 @@ hl.config({
     },
 
     decoration = {
-        rounding       = 10,
-        rounding_power = 2,
+        --rounding       = 10,
+        --rounding_power = 2,
 
         -- Change transparency of focused and unfocused windows
         active_opacity   = 1,
@@ -197,7 +203,7 @@ hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 7,    bezier = "
 -- Ref https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
 -- "Smart gaps" / "No gaps when only"
 -- uncomment all if you wish to use that.
-hl.workspace_rule({ workspace = "w[tv1]", gaps_out = 0, gaps_in = 0 })
+--hl.workspace_rule({ workspace = "w[tv1]", gaps_out = 0, gaps_in = 0 })
 hl.workspace_rule({ workspace = "f[1]",   gaps_out = 0, gaps_in = 0 })
 hl.window_rule({
         name  = "no-gaps-wtv1",
@@ -292,6 +298,7 @@ hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
 local closeWindowBind = hl.bind(mainMod .. " + C", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
+hl.bind(mainMod .. " + F", hl.dsp.exec_cmd(file_menu))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(alt_menu))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("helium"))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
